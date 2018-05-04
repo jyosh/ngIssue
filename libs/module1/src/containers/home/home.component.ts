@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    Observable.fromPromise(this.afAuth.auth.signOut()).pipe(first());
+    Observable.fromPromise(this.afAuth.auth.signOut()).pipe(first()).subscribe();
   }
 
   onAfterLogin() {
